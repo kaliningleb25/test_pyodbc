@@ -29,8 +29,8 @@ curl -O https://download.microsoft.com/download/b/9/f/b9f3cce4-3925-46d4-9f46-da
 
 
 #Install the package(s)
-sudo apk add --allow-untrusted msodbcsql18_18.1.2.1-1_amd64.apk
-sudo apk add --allow-untrusted mssql-tools18_18.1.2.1-1_amd64.apk
+apk add --allow-untrusted msodbcsql18_18.1.2.1-1_amd64.apk
+apk add --allow-untrusted mssql-tools18_18.1.2.1-1_amd64.apk
 '''
         }
 
