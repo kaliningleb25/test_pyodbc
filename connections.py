@@ -1,7 +1,7 @@
 import pypyodbc
 
 conn = pypyodbc.connect(
-    "Driver={/opt/microsoft/msodbcsql17/lib64/libmsodbcsql-17.0.so.1.1};"
+    "Driver={ODBC Driver 17 for SQL Server};"
     "Server=EPBYGROW00BD\\SQLEXPRESS;"
     "Database=AdventureWorks2012;"
     "Trusted_Connection=yes;"
