@@ -12,7 +12,7 @@ pipeline {
     }
     stage('PyTest') {
       steps {
-        sh 'python3 -m pytest dq'
+        sh 'python3 -m pytest dq.py'
       }
     }  
   }
