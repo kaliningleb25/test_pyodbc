@@ -14,14 +14,11 @@ pipeline {
     stage('Test') {
         steps {
             sh '''
-curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
-curl https://packages.microsoft.com/config/ubuntu/$(lsb_release -rs)/prod.list > /etc/apt/sources.list.d/mssql-release.list > exit
-apt-get update
-ACCEPT_EULA=Y apt-get install -y msodbcsql18
-echo 'export PATH="$PATH:/opt/mssql-tools18/bin"' >> ~/.bashrc
-source ~/.bashrc
-# optional: for unixODBC development headers
-apt-get install -y unixodbc-dev
+curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+echo "deb [arch=amd64] https://packages.microsoft.com/ubuntu/18.04/prod bionic 
+main" | sudo tee /etc/apt/sources.list.d/mssql-release.list
+apt update
+apt install msodbcsql17
 
 '''
             }
