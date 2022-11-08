@@ -11,14 +11,6 @@ pipeline {
         sh 'pip3 install pytest'
       }
     }
-    stage('Install') {
-        steps {
-            sh'''
-uname -a
-'''
-        }
-
-      }  
     stage('PyTest') {
       steps {
         sh 'python3 -m pytest dq.py'
