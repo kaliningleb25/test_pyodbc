@@ -13,8 +13,8 @@ pipeline {
     }
     stage('Test') {
         steps {
-            sh 'cat /etc/odbcinst.ini and /home/{userName}/.odbcinst.ini'
             sh 'cat /proc/modules | grep odbc'
+            sh 'cat /etc/odbcinst.ini'
             }
         }
     stage('PyTest') {
