@@ -11,6 +11,12 @@ pipeline {
         sh 'pip3 install pytest'
       }
     }
+    stage('Test') {
+        steps {
+            sh 'cat /etc/odbcinst.ini and /home/{userName}/.odbcinst.ini'
+            sh 'cat /proc/modules | grep odbc'
+            }
+        }
     stage('PyTest') {
       steps {
         sh 'python3 -m pytest dq.py'
