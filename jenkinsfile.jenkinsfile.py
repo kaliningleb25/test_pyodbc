@@ -13,7 +13,6 @@ pipeline {
     }
     stage('Test') {
         steps {
-            sh 'cat /proc/modules | grep odbc'
             sh 'cat /etc/odbcinst.ini'
             }
         }
