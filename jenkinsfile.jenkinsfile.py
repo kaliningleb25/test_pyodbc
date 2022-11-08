@@ -6,8 +6,6 @@ pipeline {
         echo 'Installing required pyhon libraries'
         sh 'pip3 install robotframework'
         sh 'pip3 install robotframework-databaselibrary'
-        sh 'pip3 install pyodbc'
-        sh 'pip3 install pypyodbc'
         sh 'pip3 install pytest'
       }
     }
