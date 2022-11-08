@@ -9,6 +9,11 @@ pipeline {
         sh 'pip3 install pyodbc'
         sh 'pip3 install pytest'
       }
-    }         
+    }
+    stage('PyTest') {
+      steps {
+        sh 'python3 -m pytest dq'
+      }
+    }  
   }
 }
